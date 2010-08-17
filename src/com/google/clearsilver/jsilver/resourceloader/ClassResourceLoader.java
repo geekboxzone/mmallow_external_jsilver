@@ -55,7 +55,7 @@ public class ClassResourceLoader extends BufferedResourceLoader {
 
   public ClassResourceLoader(Class<?> cls) {
     this.cls = cls;
-    this.basePath = ".";
+    this.basePath = "/" + cls.getPackage().getName().replace('.', '/');
   }
   
   /**
